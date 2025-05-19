@@ -51,4 +51,17 @@ git clone https://github.com/digitalboostplus/comp-analysis.git
 
 ## License
 
-MIT License - feel free to use this project for your own purposes. 
+MIT License - feel free to use this project for your own purposes.
+
+## Medical Claims Prototype
+
+This repository also contains a minimal FastAPI-based prototype for a medical
+claims management system located in `claims_app/`. To run it:
+
+```bash
+pip install fastapi uvicorn sqlalchemy pydantic
+uvicorn claims_app.main:app --reload
+```
+
+The API exposes endpoints for submitting claims and retrieving AI-powered
+recommendations.

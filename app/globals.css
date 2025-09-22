@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 min-h-screen;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  @apply text-brand-light hover:text-brand transition-colors;
+}
+
+::selection {
+  @apply bg-brand text-white;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+}
+
+.section-card {
+  @apply bg-slate-900/60 border border-white/5 rounded-3xl shadow-soft p-6 backdrop-blur;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/80;
+}
+
+.tag-chip {
+  @apply inline-flex items-center gap-1 rounded-full bg-brand/10 px-3 py-1 text-xs font-medium text-brand-light;
+}
+
+.table-grid {
+  @apply grid gap-3 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(37, 99, 235, 0.4), rgba(56, 189, 248, 0.25), rgba(52, 211, 153, 0.4));
+  opacity: 0.9;
+}
+
+.section-title {
+  @apply text-xl font-semibold text-white tracking-tight;
+}
+
+.section-subtitle {
+  @apply text-sm text-white/60;
+}
+
+.card-grid {
+  @apply grid gap-6 md:grid-cols-2;
+}
+
+.callout {
+  @apply rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-white/80;
+}
+
+.shadow-ring {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
